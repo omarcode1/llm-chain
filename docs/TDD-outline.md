@@ -1,7 +1,3 @@
-# Technical Design Document — Outline
-
-> Export this to PDF (5–8 pages) for Moodle submission. Focus on **why**, not just **what**.
-
 ## 1. Executive Summary
 
 - **Problem:** Manual PR description writing is slow and inconsistent.

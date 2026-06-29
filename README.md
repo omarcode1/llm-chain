@@ -118,4 +118,5 @@ src/
 
 ## Documentation
 
-- [TDD Outline](docs/TDD-outline.md) — Technical Design Document skeleton for Moodle submission
+- [TDD Outline](docs/TDD-outline.md) — Technical Design Document skeleton
+- [Architecture](docs/architecture.md) — Technical Design Architecture skeleton
