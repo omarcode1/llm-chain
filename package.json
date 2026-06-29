@@ -1,0 +1,47 @@
+{
+  "name": "llmchain-pr-agent",
+  "version": "1.0.0",
+  "description": "RAG-based PR Description Agent with LangChain.js, Cursor SDK, and Clean Architecture",
+  "main": "dist/server.js",
+  "scripts": {
+    "dev": "tsx watch src/server.ts",
+    "build": "tsc",
+    "start": "node dist/server.js",
+    "example": "tsx",
+    "example:prompts": "tsx examples/01-prompts-templates.ts",
+    "example:parsers": "tsx examples/02-output-parsers.ts",
+    "example:legacy": "tsx examples/03-legacy-chains.ts",
+    "example:lcel": "tsx examples/04-lcel-chains.ts",
+    "example:params": "tsx examples/05-llm-parameters.ts",
+    "example:embeddings": "tsx examples/06-embeddings-vectorstore.ts",
+    "example:rag": "tsx examples/07-rag-pipeline.ts",
+    "example:tools": "tsx examples/08-tools-loaders-splitters.ts",
+    "example:memory": "tsx examples/09-memory-chat-history.ts"
+  },
+  "keywords": ["langchain", "rag", "cursor", "jira", "pr-agent"],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@cursor/sdk": "^1.0.22",
+    "@langchain/aws": "^1.4.2",
+    "@langchain/classic": "^1.0.38",
+    "@langchain/core": "^1.2.1",
+    "@langchain/pinecone": "^1.0.3",
+    "@langchain/textsplitters": "^1.0.1",
+    "@pinecone-database/pinecone": "^5.0.0",
+    "cheerio": "^1.0.0",
+    "dotenv": "^16.4.7",
+    "express": "^5.2.1",
+    "langsmith": "^0.7.12",
+    "reflect-metadata": "^0.2.2",
+    "uuid": "^11.0.3",
+    "zod": "^3.24.1"
+  },
+  "devDependencies": {
+    "@types/express": "^5.0.0",
+    "@types/node": "^22.10.0",
+    "@types/uuid": "^10.0.0",
+    "tsx": "^4.19.2",
+    "typescript": "^5.7.2"
+  }
+}
