@@ -87,6 +87,8 @@ curl -X POST http://localhost:3000/api/v1/pr/refine \
 
 ## Architecture
 
+See **[docs/architecture.md](docs/architecture.md)** for Mermaid diagrams: system overview, Clean Architecture layers, ingest/generate/refine flows, parent-document retrieval, and provider wiring.
+
 ```
 src/
   domain/         # Entities, ports, domain errors
@@ -95,9 +97,9 @@ src/
   shared/         # Config, logger
 ```
 
-**Data flow:** User → Loaders → Text Splitter → Embeddings → Vector Store → Retriever → Prompt → LLM → Output Parser → PR Draft
+**Generate flow:** Jira + git diff → RAG retrieval (parent docs) → LCEL prompt → LLM → Zod parser → `PRDraft` JSON + session.
 
-**Advanced RAG:** Parent Document Retrieval — child chunks indexed for search, full parent docs returned to LLM.
+**Ingest flow:** Loaders → text splitter → embeddings → vector store (child chunks; parents kept for retrieval).
 
 ## Provider Configuration
 
