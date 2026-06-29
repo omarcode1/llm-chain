@@ -52,7 +52,7 @@ export function loadEnv(): EnvConfig {
     pineconeApiKey && optionalEnv('PINECONE_INDEX') ? 'pinecone' : 'memory';
 
   return {
-    port: Number(process.env.PORT) || 3009,
+    port: Number(process.env.PORT) || 3000,
     cursorApiKey: optionalEnv('CURSOR_API_KEY'),
     cursorModel: optionalEnv('CURSOR_MODEL', 'composer-2.5'),
     jiraBaseUrl: optionalEnv('JIRA_BASE_URL'),
